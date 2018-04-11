@@ -1,0 +1,7 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name, label: 'Name', error: 'name is mandatory, please specify one' %>
+  <%= f.input :address, label: 'Address', error: 'Address is mandatory, please specify one' %>
+  <%= f.input :phone_number, label: 'Phone Number' %>
+  <%= f.input :category, label: 'category', collection: ["chinese", "italian", "japanese", "french", "belgian"], error: 'category not matching' %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
